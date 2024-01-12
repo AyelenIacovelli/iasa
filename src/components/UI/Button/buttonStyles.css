@@ -1,0 +1,40 @@
+.button {
+    font-size: 25px;
+    padding: 8px 12px;
+    border: 2px solid black;
+    background: none;
+    color: black;
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.button:hover {
+    background-image: url(../../../assets/images/background\ 2.avif);
+    background-position: center;
+    background-size: contain;
+    color: white;
+}
+
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width:992px) {
+
+    .button {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .button {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .button {
+        font-size: 16px;
+    }
+}

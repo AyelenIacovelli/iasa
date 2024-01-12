@@ -1,0 +1,139 @@
+.nosotros__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.nosotros__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    min-height: 1085px;
+    width: 100%;
+}
+
+.background {
+    background-image: url(../../assets/images/brida\ de\ acople.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 1085px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+}
+
+.nosotros__container-data {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    gap: 110px;
+    width: 70%;
+}
+
+.historia,
+.calidad,
+.confianza {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+    padding: 20px 40px;
+}
+
+.historia h3,
+.calidad h3,
+.confianza h3 {
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    text-decoration: underline;
+}
+
+.historia p,
+.calidad p,
+.confianza p {
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px black;
+    color: white;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width:992px) {
+
+    .nosotros__container-data {
+        gap: 80px;
+    }
+
+    .historia p,
+    .calidad p,
+    .confianza p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    .nosotros__container-data {
+        width: 80%;
+    }
+
+    .historia p,
+    .calidad p,
+    .confianza p {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    .nosotros__container,
+    .background {
+        min-height: 950px;
+    }
+
+    .nosotros__container-data {
+        width: 90%;
+        gap: 50px;
+    }
+
+    .historia,
+    .calidad,
+    .confianza {
+        padding: 10px 7px;
+        gap: 19px;
+    }
+
+    .historia p,
+    .calidad p,
+    .confianza p {
+        font-size: 16px;
+    }
+
+    .historia h3,
+    .calidad h3,
+    .confianza h3 {
+        font-size: 23px;
+    }
+}

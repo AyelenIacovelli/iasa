@@ -1,0 +1,676 @@
+/* HERO */
+
+.hero__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 107vh;
+    margin-top: -100px;
+}
+
+.hero__container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/images/frente\ ok.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    gap: 50px;
+    padding-top: 50px;
+    position: relative;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50, 50, 51, 0.397);
+}
+
+.hero__section h1 {
+    font-size: 45px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 3px white;
+    color: rgb(223, 0, 0);
+    z-index: 2;
+}
+
+.hero__container-p {
+    width: 70%;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px white;
+    text-align: center;
+    z-index: 2;
+}
+
+
+/* PRODUCTOS Y SERVICIOS */
+
+.products__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px 120px 5px;
+}
+
+.products__container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.products__container h2 {
+    padding: 120px 0 80px 0;
+    background-color: white;
+    margin-top: -40px;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.products__container-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.card__mecanizados,
+.card__transmisiones,
+.card__transportadores {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 312px;
+    width: 30%;
+    height: 600px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../../assets/images/brida\ de\ acople.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 20px 12px;
+    gap: 20px;
+}
+
+.card__transmisiones {
+    background-image: url(../../assets/images/contacto2.jpg);
+}
+
+.card__transportadores {
+    background-image: url(../../assets/images/transportador\ a\ cinta.jpg);
+}
+
+.darkmodal {
+    background: rgba(50, 50, 51, 0.678);
+    border-radius: 10px;
+}
+
+.card__mecanizados h3,
+.card__transmisiones h3,
+.card__transportadores h3 {
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    text-decoration: underline;
+    z-index: 3;
+}
+
+.p_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+    z-index: 3;
+}
+
+.p_container p {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+/* CLIENTES */
+
+ul,
+li {
+    list-style: none;
+    white-space: nowrap;
+}
+
+li {
+    display: inline;
+}
+
+ul {
+    display: flex;
+}
+
+.clients__section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clients__container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: gray;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 120px;
+}
+
+.clients__container h2 {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.container-general {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0 60px;
+}
+
+.slider__container {
+    position: relative;
+    width: 382px;
+    background-color: white;
+    padding: 100px;
+    border-radius: 50%;
+}
+
+.slider__container-imgs {
+
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.slider__container-imgs img {
+    width: 180px;
+    height: 120px;
+}
+
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.left-arrow {
+    left: 32px;
+}
+
+.right-arrow {
+    right: 32px;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dot-container-item {
+    margin: 8px 3px;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+}
+
+.active {
+    background-color: gray;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.clients_text {
+    text-align: center;
+}
+
+.clients_text p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* INGENIERIA Y CONTROL */
+
+.ingenieria__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.ingenieria__control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 120px 10px;
+    margin-top: -40px;
+    z-index: 3;
+    background-color: white;
+    gap: 35px;
+}
+
+.ingenieria__container,
+.control__container {
+    display: flex;
+    width: 100%;
+    height: 550px;
+    gap: 30px;
+}
+
+.ingenieria__container-img,
+.control__container-img {
+    width: 50%;
+}
+
+.ingenieria__container-img img,
+.control__container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.ingenieria__container-data,
+.control__container-data {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid black;
+}
+
+.ingenieria__container-data h2,
+.control__container-data h2 {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.ingenieria__container-data ul,
+.control__container-data ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.ingenieria__container-data ul {
+    text-align: start;
+}
+
+.control__container-data ul {
+    text-align: end;
+}
+
+.ingenieria__container-data ul li,
+.control__container-data ul li {
+    white-space: wrap;
+    font-size: 22px;
+}
+
+/* CONTACTO */
+
+.contacto__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contacto__container {
+    width: 100%;
+    max-width: 1400px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.contacto__container-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__container-title h2 {
+    padding: 120px 0 40px 0;
+    background-color: white;
+    margin-top: -40px;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.contacto__container-title h3 {
+    font-size: 27px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.contacto__container-info {
+    padding: 50px 0;
+}
+
+.contacto__container-info-datos p {
+    font-size: 22px;
+}
+
+.contacto__container-info-mapa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__container-info-mapa iframe {
+    width: 522px;
+    height: 500px;
+    border: none;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width:992px) {
+
+    /* HERO */
+
+    .hero__section {
+        margin-top: -80px;
+    }
+
+    .hero__container {
+        padding-top: 40px;
+    }
+
+    .hero__container-p {
+        width: 80%;
+        font-weight: 600;
+        text-align: center;
+        font-size: 25px;
+    }
+
+
+    /* PRODUCTOS Y SERVICIOS */
+
+    .card__mecanizados,
+    .card__transmisiones,
+    .card__transportadores {
+        min-width: 360px;
+        width: 47%;
+    }
+
+    /* CLIENTES */
+
+    .container-general {
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    .clients_text p {
+        font-size: 18px;
+    }
+
+    /* INGENIERIA */
+
+    .ingenieria__container,
+    .control__container {
+        height: 420px;
+    }
+
+    .ingenieria__container-data ul,
+    .control__container-data ul {
+        gap: 5px;
+    }
+
+    .ingenieria__container-data ul li,
+    .control__container-data ul li {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+    /* HERO */
+
+    .hero__container {
+        gap: 35px;
+    }
+
+    .hero__section h1 {
+        font-size: 40px;
+    }
+
+    .hero__container-p {
+        width: 80%;
+        font-size: 22px;
+    }
+
+    /* PRODUCTOS Y SERVICIOS */
+
+    .card__mecanizados,
+    .card__transmisiones,
+    .card__transportadores {
+        width: 80%;
+    }
+
+    .products__container h2 {
+        padding-bottom: 40px;
+    }
+
+    /* CLIENTES */
+
+    .container-general {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .clients__container h2 {
+        padding-bottom: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    /* HERO */
+
+    .hero__section {
+        height: 50vh;
+    }
+
+    .hero__section h1 {
+        display: none;
+    }
+
+    .hero__container-p {
+        font-size: 16px;
+    }
+
+    /* PRODUCTOS Y SERVICIOS */
+
+    .products__section {
+        padding-bottom: 80px;
+    }
+
+    .products__container h2 {
+        font-size: 35px;
+        border-top-right-radius: unset;
+        border-top-left-radius: unset;
+        margin-top: unset;
+        padding-top: 80px;
+    }
+
+    .products__container-cards {
+        width: 100%;
+    }
+
+    .card__mecanizados,
+    .card__transmisiones,
+    .card__transportadores {
+        min-width: unset;
+        width: 98%;
+        height: 480px;
+    }
+
+    .card__mecanizados h3,
+    .card__transmisiones h3,
+    .card__transportadores h3 {
+        font-size: 23px;
+    }
+
+    .p_container p {
+        font-size: 20px;
+    }
+
+    /* CLIENTES */
+
+    .container-general {
+        padding: unset;
+    }
+
+    .slider__container {
+        width: 287px;
+        height: 287px;
+    }
+
+    .ingenieria__container-data h2,
+    .control__container-data h2 {
+        font-size: 35px;
+    }
+
+    .slider__container-imgs img {
+        width: 86px;
+        height: 66px;
+    }
+
+    .clients__container h2 {
+        font-size: 35px;
+    }
+
+    .clients_text p {
+        font-size: 20px;
+        padding: 0 5px;
+    }
+
+    .right-arrow,
+    .left-arrow {
+        font-size: 40px;
+    }
+
+    /* INGENIERIA */
+
+    .ingenieria__control {
+        padding: 40px 10px;
+        gap: unset;
+    }
+
+    .ingenieria__container-img,
+    .control__container-img {
+        display: none;
+    }
+
+    .ingenieria__container-data,
+    .control__container-data {
+        width: 100%;
+    }
+
+    .ingenieria__container-data {
+        padding-bottom: 20px;
+    }
+
+    .ingenieria__container-data ul li,
+    .control__container-data ul li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* CONTACTO */
+
+    .contacto__container {
+        padding-bottom: 80px;
+    }
+
+    .contacto__container-title h2 {
+        font-size: 35px;
+        border-top-right-radius: unset;
+        border-top-left-radius: unset;
+        margin-top: unset;
+        padding-top: 80px;
+    }
+
+    .contacto__container-title h3 {
+        font-size: 23px;
+        font-weight: 600;
+        padding: 0 5px;
+    }
+
+    .contacto__container-info-datos p {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .contacto__container-info-mapa iframe {
+        width: 280px;
+        height: 280px;
+    }
+
+}
