@@ -1,7 +1,9 @@
 .footer__section {
     width: 100%;
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    background-color: yellowgreen;
 }
 
 .footer__container {
@@ -10,8 +12,7 @@
     display: flex;
     height: 100%;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: yellowgreen;
+    justify-content: space-evenly;    
     height: 65px;
     gap: 7px;
     padding-right: 10px;

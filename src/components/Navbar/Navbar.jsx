@@ -13,7 +13,7 @@ const Navbar = () => {
     const headerRef = useRef(null)
 
     const stickyHeaderFunc = () => {
-        if (window.scrollY > 300) {
+        if (window.scrollY > 600) {
             headerRef.current.classList.add("sticky__header");
         } else {
             headerRef.current.classList.remove("sticky__header");
@@ -29,8 +29,9 @@ const Navbar = () => {
     }, []);
 
     const navigateToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
+        const alturaEncabezado = headerRef.current.offsetHeight; // Obtén la altura del encabezado pegajoso
+        window.scrollTo({ top: -alturaEncabezado, behavior: 'smooth' });
+      };
 
     return (
         <header ref={headerRef}>

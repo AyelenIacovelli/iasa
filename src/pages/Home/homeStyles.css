@@ -11,7 +11,6 @@
 
 .hero__container {
     width: 100%;
-    max-width: 1400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,14 +74,11 @@
 .products__container h2 {
     padding: 120px 0 80px 0;
     background-color: white;
-    margin-top: -40px;
-    z-index: 3;
     width: 100%;
     text-align: center;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
     font-size: 40px;
     font-weight: 900;
+    margin-top: 3px;
 }
 
 .products__container-cards {
@@ -162,7 +158,7 @@ li {
 }
 
 li {
-    display: inline;
+    /* display: inline; */
 }
 
 ul {
@@ -175,13 +171,13 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: gray;
 }
 
 .clients__container {
     width: 100%;
     max-width: 1400px;
-    background-color: gray;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -291,7 +287,6 @@ ul {
     width: 100%;
     max-width: 1400px;
     padding: 120px 10px;
-    margin-top: -40px;
     z-index: 3;
     background-color: white;
     gap: 35px;
@@ -389,14 +384,11 @@ ul {
 .contacto__container-title h2 {
     padding: 120px 0 40px 0;
     background-color: white;
-    margin-top: -40px;
-    z-index: 3;
     width: 100%;
     text-align: center;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
     font-size: 40px;
     font-weight: 900;
+    margin-top: 3px;
 }
 
 .contacto__container-title h3 {
