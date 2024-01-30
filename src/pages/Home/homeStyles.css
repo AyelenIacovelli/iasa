@@ -34,23 +34,25 @@
 }
 
 .hero__section h1 {
-    font-size: 45px;
+    font-size: 65px;
     font-weight: 900;
     letter-spacing: 5px;
-    text-shadow: 1px 1px 3px white;
-    color: rgb(223, 0, 0);
+    text-shadow: 1px 0px 1px black;
+    color: white;
     z-index: 2;
 }
 
 .hero__container-p {
-    width: 70%;
-    font-size: 28px;
-    font-weight: 700;
-    text-shadow: 1px 1px 3px white;
+    width: 80%;
+    font-size: 38px;
+    font-weight: 500;
+    text-shadow: 1px 0px 1px gray;
+    color: white;
     text-align: center;
     z-index: 2;
+    letter-spacing: 2px;
+    margin-top: -58px;
 }
-
 
 /* PRODUCTOS Y SERVICIOS */
 
@@ -72,7 +74,7 @@
 }
 
 .products__container h2 {
-    padding: 120px 0 80px 0;
+    padding: 80px 0;
     background-color: white;
     width: 100%;
     text-align: center;
@@ -189,6 +191,7 @@ ul {
     font-weight: 900;
     padding: 80px 0;
     text-align: center;
+    color: white;
 }
 
 .container-general {
@@ -263,6 +266,7 @@ ul {
 
 .clients_text {
     text-align: center;
+    color: white;
 }
 
 .clients_text p {
