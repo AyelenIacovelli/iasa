@@ -22,9 +22,7 @@ const Products = () => {
                                 <p>Bases de adaptacion</p>
                                 <p>Mecanizado in situ</p>
                             </div>
-                            <Button onClick={() => {
-                                navigate('/products')
-                            }}>VER TRABAJOS</Button>
+                            <Button onClick={() => navigate('/mecanizados')}>VER TRABAJOS</Button>
                         </div>
                         <div className='card__transmisiones'>
                             <div className='modal darkmodal'></div>

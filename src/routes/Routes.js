@@ -6,6 +6,7 @@ import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import Calidad from '../pages/Calidad/Calidad';
 import Contacto from '../pages/Contacto/Contacto';
 import Nosotros from '../pages/Nosotros/Nosotros';
+import Mecanizados from '../pages/Mecanizados/Mecanizados';
 
 function Routes() {
     return (
@@ -15,6 +16,7 @@ function Routes() {
             <Route path='/calidad' element={<Calidad />} />
             <Route path='/contacto' element={<Contacto />} />
             <Route path='/nosotros' element={<Nosotros />} />
+            <Route path='/mecanizados' element={<Mecanizados />} />
             <Route path='*' element={<PageNotFound />} />
         </ReactDomRoutes>
     );

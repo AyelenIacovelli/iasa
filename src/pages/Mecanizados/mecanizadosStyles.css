@@ -1,0 +1,105 @@
+.mecanizados__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mecanizados__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.mecanizados__container-hero {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(../../assets/images/brida\ de\ acople.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    margin-top: -100px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.modal-mec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    background: rgba(50, 50, 51, 0.397);
+}
+
+.mecanizados__container-hero h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    z-index: 2;
+    letter-spacing: 3px;
+    text-shadow: 1px 0px 1px black;
+}
+
+.mecanizados__container-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    padding: 80px 0;
+    gap: 80px;
+}
+
+.reposicion,
+.estructuras,
+.insitu,
+.caldederia {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    gap: 30px;
+}
+
+.reposicion-info,
+.estructuras-info,
+.insitu-info,
+.caldederia-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reposicion-info h3,
+.estructuras-info h3,
+.insitu-info h3,
+.caldederia-info h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.reposicion-info p,
+.estructuras-info p,
+.insitu-info p,
+.caldederia p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.reposicion-galeria,
+.estructuras-galeria,
+.insitu-galeria,
+.caldederia-galeria {
+    display: flex;
+    flex-wrap: wrap;
+}
