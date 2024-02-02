@@ -33,9 +33,7 @@ const Products = () => {
                                 <p>Engranajes</p>
                                 <p>Acoplamientos</p>
                             </div>
-                            <Button onClick={() => {
-                                navigate('/products')
-                            }}>VER TRABAJOS</Button>
+                            <Button onClick={() => navigate('/transmisiones')}>VER TRABAJOS</Button>
                         </div>
                         <div className='card__transportadores'>
                             <div className='modal darkmodal'></div>
@@ -48,9 +46,7 @@ const Products = () => {
                                 <p>Transportadores combinados</p>
                                 <p>Tapadores de baldes automáticos</p>
                             </div>
-                            <Button onClick={() => {
-                                navigate('/products')
-                            }}>VER TRABAJOS</Button>
+                            <Button onClick={() => navigate('/transportadores')}>VER TRABAJOS</Button>
                         </div>
                     </div>
                 </div>

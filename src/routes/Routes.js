@@ -7,6 +7,8 @@ import Calidad from '../pages/Calidad/Calidad';
 import Contacto from '../pages/Contacto/Contacto';
 import Nosotros from '../pages/Nosotros/Nosotros';
 import Mecanizados from '../pages/Mecanizados/Mecanizados';
+import Transmisiones from '../pages/Transmisiones/Transmisiones';
+import Transportadores from "../pages/Transportadores/Transportadores"
 
 function Routes() {
     return (
@@ -17,6 +19,8 @@ function Routes() {
             <Route path='/contacto' element={<Contacto />} />
             <Route path='/nosotros' element={<Nosotros />} />
             <Route path='/mecanizados' element={<Mecanizados />} />
+            <Route path='/transmisiones' element={<Transmisiones />} />
+            <Route path='/transportadores' element={<Transportadores />} />
             <Route path='*' element={<PageNotFound />} />
         </ReactDomRoutes>
     );

@@ -43,6 +43,7 @@
     z-index: 2;
     letter-spacing: 3px;
     text-shadow: 1px 0px 1px black;
+    text-align: center;
 }
 
 .mecanizados__container-info {
@@ -102,4 +103,24 @@
 .caldederia-galeria {
     display: flex;
     flex-wrap: wrap;
+}
+
+.reposicion-galeria img,
+.estructuras-galeria img,
+.insitu-galeria img,
+.caldederia-galeria img {
+    cursor: pointer;
+}
+
+/* MEDIAQUERIES */
+
+@media only screen and (max-width:992px) {
+
+    .reposicion,
+    .estructuras,
+    .insitu,
+    .caldederia {
+        padding: 0 20px;
+        gap: 15px;
+    }
 }

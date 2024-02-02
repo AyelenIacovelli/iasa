@@ -159,9 +159,6 @@ li {
     white-space: nowrap;
 }
 
-li {
-    /* display: inline; */
-}
 
 ul {
     display: flex;
