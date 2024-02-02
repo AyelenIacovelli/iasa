@@ -8,9 +8,24 @@ import Products from '../Products/Products';
 import Calidad from '../Calidad/Calidad';
 import Contacto from '../Contacto/Contacto';
 import Nosotros from '../Nosotros/Nosotros';
+import { motion } from "framer-motion";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const logoVariants = {
+    initial: {
+      opacity: 0,
+      y: 50,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.8,
+      },
+    },
+  };
 
   // SLIDER CLIENTES
   const listRef = useRef();
@@ -56,8 +71,12 @@ const Home = () => {
       <section className='hero__section'>
         <div className='hero__container'>
           <div className='modal'></div>
-          <h1>IASA</h1>
-          <p className='hero__container-p'>Más de 24 años prestando servicios y productos metalúrgicos de primera calidad</p>
+          <motion.h1 initial='initial'
+            animate='animate'
+            variants={logoVariants}>IASA</motion.h1>
+          <motion.p initial='initial'
+            animate='animate'
+            variants={logoVariants} className='hero__container-p'>Más de 24 años prestando servicios y productos metalúrgicos de primera calidad</motion.p>
           <Button onClick={() => navigate('/contacto')}>CONTACTO</Button>
         </div>
       </section>

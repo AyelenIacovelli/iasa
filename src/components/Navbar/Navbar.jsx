@@ -7,6 +7,21 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
 
+    const logoVariants = {
+        initial: {
+            opacity: 0,
+            y: 50,
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 1.8,
+            },
+        },
+    };
+
+
     const menuRef = useRef(null)
     const menuToggle = () => menuRef.current.classList.toggle('active__menu')
 
@@ -37,11 +52,16 @@ const Navbar = () => {
         <header ref={headerRef}>
             <nav>
                 {/* LOGO */}
-                <div className='logo-container'>
+                <motion.div
+                    className='logo-container'
+                    initial='initial'
+                    animate='animate'
+                    variants={logoVariants}
+                >
                     <Link to="/" onClick={navigateToTop}>
                         <img src={logo} alt="logo" />
                     </Link>
-                </div>
+                </motion.div>
                 {/* LINKS */}
                 <div className="navigation" ref={menuRef} onClick={menuToggle}>
                     <div className="links-container">
