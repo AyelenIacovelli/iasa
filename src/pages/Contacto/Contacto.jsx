@@ -4,6 +4,7 @@ import { IoIosMail, IoLogoWhatsapp } from "react-icons/io"
 import Helmet from '../../components/Helmet/Helmet'
 
 const Contacto = () => {
+
     return (
         <Helmet title="contacto">
             <section className='contacto__section'>

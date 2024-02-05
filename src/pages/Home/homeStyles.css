@@ -151,6 +151,10 @@
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
+.motion-div-btn {
+    z-index: 99999;
+}
+
 /* CLIENTES */
 
 ul,
@@ -197,7 +201,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 30px;
     padding: 0 60px;
 }
 
@@ -264,6 +268,7 @@ ul {
 .clients_text {
     text-align: center;
     color: white;
+
 }
 
 .clients_text p {

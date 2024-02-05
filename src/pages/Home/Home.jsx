@@ -9,9 +9,19 @@ import Calidad from '../Calidad/Calidad';
 import Contacto from '../Contacto/Contacto';
 import Nosotros from '../Nosotros/Nosotros';
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
   const navigate = useNavigate();
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
+  const textVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 2 } },
+  };
 
   const logoVariants = {
     initial: {
@@ -99,7 +109,7 @@ const Home = () => {
                   ))}
                 </ul>
               </div>
-              <div className='dots-container'>
+              <div className='dots-container' ref={ref}>
                 {Clientes.map((_, index) => (
                   <div
                     key={index}
@@ -112,7 +122,12 @@ const Home = () => {
               </div>
             </div>
             <div className='clients_text'>
-              <p>Nuestra experiencia de muchos años en el trabajo metalúrgico nos permite mostrar la gran cantidad de empresas que confiaron en nosotros</p>
+
+              <motion.p
+                initial='hidden'
+                animate={inView ? 'visible' : 'hidden'}
+                variants={textVariants}
+              >Nuestra experiencia de muchos años en el trabajo metalúrgico nos permite mostrar la gran cantidad de empresas que confiaron en nosotros</motion.p>
             </div>
           </div>
         </div>

@@ -2,20 +2,42 @@ import React from 'react'
 import control from "../../assets/images/control.jpg"
 import ingenieria from "../../assets/images/ingenieria.jpg"
 import Helmet from '../../components/Helmet/Helmet'
+import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
 
 const Calidad = () => {
+
+    const [refIngenieria, inViewIngenieria] = useInView({
+        triggerOnce: true,
+    });
+
+    const [refControl, inViewControl] = useInView({
+        triggerOnce: true,
+    });
+
+    const h2Variants = {
+        hidden: { opacity: 0, x: -200 },
+        visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+    };
+
+    const h2Variants2 = {
+        hidden: { opacity: 0, x: 200 },
+        visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+    };
 
 
     return (
         <Helmet title="calidad">
             <section className='ingenieria__section'>
                 <div className='ingenieria__control'>
-                    <div className='ingenieria__container'>
+                    <div className='ingenieria__container' ref={refIngenieria}>
                         <div className='ingenieria__container-img'>
                             <img src={ingenieria} alt="ingenieria" />
                         </div>
                         <div className='ingenieria__container-data'>
-                            <h2>INGENIERIA</h2>
+                            <motion.h2 initial='hidden'
+                                animate={inViewIngenieria ? 'visible' : 'hidden'}
+                                variants={h2Variants}>INGENIERIA</motion.h2>
                             <ul>
                                 <li>Cálculo y proyecto de transmisiones mecánicas.</li>
                                 <li>Repotenciación y/o modernización de equipos.</li>
@@ -31,8 +53,10 @@ const Calidad = () => {
                         </div>
                     </div>
                     <div className='control__container'>
-                        <div className='control__container-data'>
-                            <h2>CONTROL</h2>
+                        <div className='control__container-data' ref={refControl} >
+                            <motion.h2 initial='hidden'
+                                animate={inViewControl ? 'visible' : 'hidden'}
+                                variants={h2Variants2}>CONTROL</motion.h2>
                             <ul>
                                 <li>Los repuestos fabricados están sometidos a un proceso de control de calidad predeterminado durante su proceso según normas ISO, DIN, ASTM, AGMA u otras afines.</li>
                                 <li>Ofrecemos supervisión, seguimiento y control, tanto de los trabajos en curso como los finalizados.</li>

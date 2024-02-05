@@ -1,47 +1,53 @@
-import React from 'react'
-import Helmet from "../../components/Helmet/Helmet"
-import Button from '../../components/UI/Button/Button'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import Helmet from "../../components/Helmet/Helmet";
+import Button from '../../components/UI/Button/Button';
+import { useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 
 const Products = () => {
+    const navigate = useNavigate();
 
-    const navigate = useNavigate()
+    const [refProducts, inViewProducts] = useInView({
+        triggerOnce: true,
+    });
 
-    const logoVariants = {
-        initial: {
+    const buttonVariants = {
+        hidden: {
             opacity: 0,
-            y: -50,
+            y: -350,
         },
-        animate: {
+        visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1.8,
+                duration: 2,
             },
         },
     };
-
 
     return (
         <Helmet title="Productos">
             <section className='products__section'>
                 <div className='products__container'>
                     <h2>PRODUCTOS Y SERVICIOS</h2>
-                    <motion.div className='products__container-cards'
-                        initial='initial'
-                        animate='animate'
-                        variants={logoVariants}>
+                    <div className='products__container-cards'
+                    >
                         <div className='card__mecanizados'>
                             <div className='modal darkmodal'></div>
                             <h3>MECANIZADOS</h3>
-                            <div className='p_container'>
+                            <div className='p_container' ref={refProducts}>
                                 <p>Piezas de reposición</p>
                                 <p>Estructuras</p>
                                 <p>Bases de adaptacion</p>
                                 <p>Mecanizado in situ</p>
                             </div>
-                            <Button onClick={() => navigate('/mecanizados')}>VER TRABAJOS</Button>
+                            <motion.div className='motion-div-btn'
+                                initial='hidden'
+                                animate={inViewProducts ? 'visible' : 'hidden'}
+                                variants={buttonVariants}>
+                                <Button onClick={() => navigate('/mecanizados')}>VER TRABAJOS</Button>
+                            </motion.div>
                         </div>
                         <div className='card__transmisiones'>
                             <div className='modal darkmodal'></div>
@@ -52,7 +58,12 @@ const Products = () => {
                                 <p>Engranajes</p>
                                 <p>Acoplamientos</p>
                             </div>
-                            <Button onClick={() => navigate('/transmisiones')}>VER TRABAJOS</Button>
+                            <motion.div className='motion-div-btn'
+                                initial='hidden'
+                                animate={inViewProducts ? 'visible' : 'hidden'}
+                                variants={buttonVariants}>
+                                <Button onClick={() => navigate('/transmisiones')}>VER TRABAJOS</Button>
+                            </motion.div>
                         </div>
                         <div className='card__transportadores'>
                             <div className='modal darkmodal'></div>
@@ -65,9 +76,14 @@ const Products = () => {
                                 <p>Transportadores combinados</p>
                                 <p>Tapadores de baldes automáticos</p>
                             </div>
-                            <Button onClick={() => navigate('/transportadores')}>VER TRABAJOS</Button>
+                            <motion.div className='motion-div-btn'
+                                initial='hidden'
+                                animate={inViewProducts ? 'visible' : 'hidden'}
+                                variants={buttonVariants}>
+                                <Button onClick={() => navigate('/transportadores')}>VER TRABAJOS</Button>
+                            </motion.div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
         </Helmet>
