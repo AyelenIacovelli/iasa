@@ -11,19 +11,19 @@ const ImageViewer = ({ image, onClose, onPrev, onNext }) => {
         onClose();
     };
 
-    const handleKeyPress = (event) => {
-        if (event.key === 'Escape') {
-            onClose();
-        }
-    };
-
     useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.key === 'Escape') {
+                onClose();
+            }
+        };
+
         window.addEventListener('keydown', handleKeyPress);
 
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, []);
+    }, [onClose]);
 
     return (
         <div className='image-viewer' onClick={handleContainerClick}>
