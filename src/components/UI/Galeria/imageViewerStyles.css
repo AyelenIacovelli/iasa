@@ -63,17 +63,22 @@
         max-width: 98%;
     }
 
+    .close-button {
+        right: 45%;
+        top: 50px;
+    }
+
     .next,
     .prev {
         position: absolute;
-        bottom: 5px;
+        bottom: 50px;
     }
 
     .next {
-        right: 75px;
+        right: 30%;
     }
 
     .prev {
-        left: 75px;
+        left: 30%;
     }
 }
