@@ -34,8 +34,20 @@
 
 @media only screen and (max-width:768px) {
 
+    .cards-container {
+        padding: 0px 3px;
+    }
+
     .product__card-img {
         width: 450px;
         height: 300px;
+    }
+}
+
+@media only screen and (max-width:576px) {
+
+    .product__card-img {
+        width: 300px;
+        height: 175px;
     }
 }
