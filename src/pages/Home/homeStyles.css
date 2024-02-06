@@ -640,6 +640,10 @@ ul {
         padding-bottom: 20px;
     }
 
+    .control__container-data ul {
+        white-space: wrap;
+    }
+
     .ingenieria__container-data ul li,
     .control__container-data ul li {
         font-size: 16px;
