@@ -81,6 +81,7 @@
     font-size: 40px;
     font-weight: 900;
     margin-top: 3px;
+    color: rgb(54, 54, 54);
 }
 
 .products__container-cards {
@@ -335,6 +336,7 @@ ul {
 .control__container-data h2 {
     font-size: 40px;
     font-weight: 900;
+    color: rgb(54, 54, 54);
 }
 
 .ingenieria__container-data ul,
@@ -343,6 +345,7 @@ ul {
     flex-direction: column;
     width: 100%;
     gap: 10px;
+    color: rgb(110, 110, 110);
 }
 
 .ingenieria__container-data ul {
@@ -395,12 +398,14 @@ ul {
     font-size: 40px;
     font-weight: 900;
     margin-top: 3px;
+    color: rgb(54, 54, 54);
 }
 
 .contacto__container-title h3 {
     font-size: 27px;
     font-weight: 800;
     text-align: center;
+    color: rgb(110, 110, 110);
 }
 
 .contacto__container-info {
@@ -409,6 +414,7 @@ ul {
 
 .contacto__container-info-datos p {
     font-size: 22px;
+    color: rgb(110, 110, 110);
 }
 
 .contacto__container-info-mapa {
