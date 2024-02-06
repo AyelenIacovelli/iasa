@@ -16,13 +16,13 @@ const Calidad = () => {
     });
 
     const h2Variants = {
-        hidden: { opacity: 0, x: -200 },
-        visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 2 } },
     };
 
     const h2Variants2 = {
-        hidden: { opacity: 0, x: 200 },
-        visible: { opacity: 1, x: 0, transition: { duration: 2 } },
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 2 } },
     };
 
 

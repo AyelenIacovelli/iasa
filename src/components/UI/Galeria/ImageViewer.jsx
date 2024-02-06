@@ -15,6 +15,10 @@ const ImageViewer = ({ image, onClose, onPrev, onNext }) => {
         const handleKeyPress = (event) => {
             if (event.key === 'Escape') {
                 onClose();
+            } else if (event.key === 'ArrowLeft') {
+                onPrev();
+            } else if (event.key === 'ArrowRight') {
+                onNext();
             }
         };
 
@@ -23,7 +27,7 @@ const ImageViewer = ({ image, onClose, onPrev, onNext }) => {
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, [onClose]);
+    }, [onClose, onNext, onPrev]);
 
     return (
         <div className='image-viewer' onClick={handleContainerClick}>
