@@ -548,6 +548,10 @@ ul {
         display: none;
     }
 
+    .hero__container {
+        background-position: 41%;
+    }
+
     .hero__container-p {
         font-size: 16px;
     }
